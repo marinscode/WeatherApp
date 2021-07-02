@@ -1,0 +1,6 @@
+#weatherResult {
+    max-width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    background-color: rgb(209, 209, 190) !important;
+}
