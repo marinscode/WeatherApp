@@ -4,3 +4,13 @@
     margin-top: 10px;
     background-color: rgb(209, 209, 190) !important;
 }
+
+mat-progress-spinner {
+    margin: auto;
+    margin-top: 15px;
+}
+
+.card-text {
+    font-size: 20px;
+    font-weight: bold;
+}

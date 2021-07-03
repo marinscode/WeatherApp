@@ -1,13 +1,29 @@
-<div class="container">
-    <div class="row">
+<mat-progress-spinner *ngIf="isLoading" mode="indeterminate"></mat-progress-spinner>
+<div class="container" *ngIf="weatherData">
+    <div class="row" *ngFor="let weather of weatherData">
         <div class="col-12">
             <div class="card bg-secondary" id="weatherResult">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-                    <h4 class="card-title">Secondary card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
+                <div class="card-header">
+                    <h2>
+                        {{weather.name}}, {{weather.sys.country}}
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card-body">
+                            <p class="card-text">{{weather.main.temp.toFixed(1)}} °C</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card-body">
+                            <h4 class="card-title">Feels like: {{weather.main.feels_like}}</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
