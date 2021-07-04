@@ -1,5 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { WeatherService } from '../weather.service';
 
 @Component({
@@ -15,18 +15,23 @@ export class SearchFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      'city': new FormControl('Livingston')
+      'city': new FormControl('Livingston', [Validators.required, Validators.minLength(3)])
     });
   }
 
+  get city() { return this.form.get('city')}
+
   onSearch() {
-    this.weatherService.getWeather(this.form.value.city);
+    if(this.form.valid) {
+      this.weatherService.getWeather(this.form.value.city);
+    }
     this.form.reset();
     this.isShowing = true;
   }
 
   clearCards() {
     this.isShowing = false;
+    this.form.reset();
     this.weatherService.clearWeatherData();
   }
 

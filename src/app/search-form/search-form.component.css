@@ -18,3 +18,7 @@ label {
     font-size: 20px;
 }
 
+.alert {
+    margin: auto;
+    margin-bottom: 15px;
+}
