@@ -24,13 +24,13 @@ img {
 #rightContainer {
     flex: 50%;
     border-radius: 10px;
-    background: lightblue;
+    background: lightgrey;
 } 
 
 #leftContainer {
     flex: 50%;
     border-radius: 10px;
-    background: lightblue;
+    background: lightgrey;
     margin: 10px;
 }
 

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../weather.service';
-import { map } from 'rxjs/operators';
-import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-weather-card',

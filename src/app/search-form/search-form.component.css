@@ -7,6 +7,7 @@
 
 button {
     background-color: rgb(209, 209, 190);
+    margin-right: 15px;
 }
 
 button:hover {

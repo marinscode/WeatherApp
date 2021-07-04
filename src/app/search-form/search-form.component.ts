@@ -25,4 +25,9 @@ export class SearchFormComponent implements OnInit {
     this.isShowing = true;
   }
 
+  clearCards() {
+    this.isShowing = false;
+    this.weatherService.clearWeatherData();
+  }
+
 }

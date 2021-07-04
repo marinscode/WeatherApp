@@ -24,4 +24,8 @@ export class WeatherService {
   getWeatherListener() {
     return this.weatherUpdated.asObservable();
   }
+
+  clearWeatherData() {
+    this.weatherData = [];
+  }
 }
