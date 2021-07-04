@@ -9,7 +9,7 @@ import { WeatherService } from '../weather.service';
 })
 export class SearchFormComponent implements OnInit {
   form: FormGroup;
-  isShowing = true;
+  isShowing = false;
 
   constructor(public weatherService: WeatherService) { }
 

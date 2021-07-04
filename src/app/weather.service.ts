@@ -13,8 +13,8 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  getWeather(city) {
-    this.http.get<any>(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=65a8bd6b1a21cfe8f34ab6efefab77a0&units=metric`)
+  getWeather(city: string) {
+    this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=65a8bd6b1a21cfe8f34ab6efefab77a0&units=metric`)
       .subscribe(data => {
         this.weatherData.push(data);
         this.weatherUpdated.next({weather: [...this.weatherData]});

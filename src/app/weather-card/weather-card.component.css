@@ -14,3 +14,26 @@ mat-progress-spinner {
     font-size: 20px;
     font-weight: bold;
 }
+
+img {
+    max-width: 50%;
+    height: auto;
+    margin-top: -20px;
+}
+
+#rightContainer {
+    flex: 50%;
+    border-radius: 10px;
+    background: lightblue;
+} 
+
+#leftContainer {
+    flex: 50%;
+    border-radius: 10px;
+    background: lightblue;
+    margin: 10px;
+}
+
+.big-text {
+    font-size: 30px;
+}

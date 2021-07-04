@@ -5,23 +5,30 @@
             <div class="card bg-secondary" id="weatherResult">
                 <div class="card-header">
                     <h2>
-                        {{weather.name}}, {{weather.sys.country}}
+                        {{weather.name}}'s weather
                     </h2>
+                    <h6>{{today | date:'fullDate'}}</h6>
                 </div>
                 <div class="row">
-                    <div class="col-6">
-                        <div class="card-body">
-                            <p class="card-text">{{weather.main.temp.toFixed(1)}} °C</p>
+                    <div class="col-lg-6 d-inline-flex align-items-center">
+                        <div class="card mx-auto shadow p-3 rounded" style="max-width: 12rem; height: 11rem;"
+                            id="rightContainer">
+                            <div class="card-body">
+                                <p class="card-text fs-5">{{weather.main.temp.toFixed(1)}} °C</p>
+                                <p class="card-text fs-6">Feels like {{weather.main.feels_like.toFixed(1)}} °C
+                                    Min: {{weather.main.temp_min.toFixed(1)}}°C Max:
+                                    {{weather.main.temp_max.toFixed(1)}}°C</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="card-body">
-                            <h4 class="card-title">Feels like: {{weather.main.feels_like}}</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the
-                                card's
-                                content.</p>
+                    <div class="col-lg-6 d-inline-flex align-items-center">
+                        <div class="card mx-auto shadow p-1 rounded" style="max-width: 12rem; height: 11rem;"
+                            id="leftContainer">
+                            <div class="card-body">
+                                <img src="https://openweathermap.org/img/wn/{{weather.weather[0].icon}}@2x.png"
+                                    class="card-img-top">
+                                <p class="card-text fs-6">{{weather.weather[0].description}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

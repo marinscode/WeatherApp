@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../weather.service';
 import { map } from 'rxjs/operators';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-weather-card',
@@ -10,6 +11,7 @@ import { map } from 'rxjs/operators';
 export class WeatherCardComponent implements OnInit {
   isLoading = false;
   weatherData;
+  today: number = Date.now();
 
   constructor(private weatherService: WeatherService) { }
 
